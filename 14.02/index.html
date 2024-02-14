@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <link href="style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="Bck">
+            <div class="container">
+                <div>
+                    <h1 class="header_text">Приветулки моя малышичка, с праздником тебя! Пойдем в Бравлик???</h1>
+                </div>
+                <div class="gif_container">
+                    <img src="Cat.gif">
+                </div>
+                <div class="buttons">
+                    <button class="btn" id="yesButton" onclick="nextPage()">Да,давай <з </button>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">Нет, прости :( </button>
+                    <script>
+                        function nextPage() {
+                            window.location.href = "yes.html";
+                        }
+    
+                        function moveButton() {
+                            var x = Math.random(1,200) * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                            var y = Math.random(1,200) * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                            document.getElementById('noButton').style.left = `${x}px`;
+                            document.getElementById('noButton').style.top = `${y}px`;
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
